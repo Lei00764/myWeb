@@ -3,13 +3,22 @@
 
 <head>
     <meta charset="utf-8">
-    <title>使用 JavaScript 的示例</title>
-
     <script src="script.js" async></script>
+
+
+    <title>small calculator</title>
 </head>
 
 <body>
-    <button>点我呀</button>
+    <input id="num1" onchange="cal()" />
+    <select id="op" onchange="cal()">
+        <option value="1">+</option>
+        <option value="2">-</option>
+        <option value="3">*</option>
+        <option value="4">/</option>
+    </select>
+    <input id="num2" onchange="cal()" />
+    <p id="ans"></p>
 </body>
 
 </html>

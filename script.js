@@ -1,11 +1,29 @@
-function createParagraph() {
-    let para = document.createElement('p');
-    para.textContent = '你点击了这个按钮！';
-    document.body.appendChild(para);
-}
+function cal() {
+    num1 = document.getElementById("num1").value;
+    num2 = document.getElementById("num2").value;
+    op = document.getElementById("op").value;
+    // 此时 num1和num2 均为字符串而非数字
 
-const buttons = document.querySelectorAll('button');
+    num1 = parseFloat(num1);
+    num2 = parseFloat(num2);
+    op = parseInt(op)
 
-for (let i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener('click', createParagraph);
+    // 定义变量
+    let answer;
+
+    switch (op) {
+        case 1:
+            answer = num1 + num2;
+            break;
+        case 2:
+            answer = num1 - num2;
+            break;
+        case 3:
+            answer = num1 * num2;
+            break;
+        case 4:
+            answer = num1 / num2;
+            break;
+    }
+    document.getElementById("ans").innerHTML = answer;
 }
